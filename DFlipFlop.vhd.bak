@@ -1,0 +1,22 @@
+-- Jared Day
+--10/6/17
+
+-- Making a D Flip FLop to use as a component
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY DFlipFlop IS 
+PORT(
+		i_clk1	:IN std_logic;
+		i_D		:IN std_logic;
+		i_CLR		:IN std_logic;
+		i_PR		:IN std_logic;
+		o_Q		:BUFFER std_logic_vector);
+END DFlipFlop;
+
+ARCHITECTURE ckt of DFlipFlop IS
+BEGIN
+	PROCESS(i_clk1, i_CLR, i_PR)
+		BEGIN
+			
